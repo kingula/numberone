@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="jquery.mobile.min.css" />
 		<link type="text/css" rel="stylesheet" href="demo.css" />
 		<link type="text/css" rel="stylesheet" href="jquery.mmenu.css" />
+		<link type="text/css" rel="stylesheet" href="app.css" />
 
 		<script type="text/javascript" src="jquery.min.js"></script>
 		<script type="text/javascript" src="jquery.mmenu.js"></script>
@@ -92,36 +93,37 @@
 		<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 	</head>
 	<body onload="onBodyLoad()">
-		<div data-role="page">
+		<div data-role="page" style="background: white">
 			<div class="header">
 				<a href="#menu" data-ajax="false"></a>
-				jQuery Mobile demo
+				Moneycorp mobile
 			</div>
-			<div id="content" data-role="content">
-				<p>This is a testpage for integrating the jQuery.mmenu plugin in a jQuery Mobile project.<br />
-					It includes internal (#page2) and external linking (page3.html)</p>
+			<div id="content" data-role="content" >
+	
+				
 
-				<p><em>Note:</em> Since jQuery Mobile uses AJAX to load pages, this example will only work in a server environment.</p>
-
-				<div id="appInfo">
-                  <p>app info div</p>
-				</div>
-
-				<div id="splashHolder">
-					<p>splash div</p>
+				<div id="splashHolder" class="centeredImage" >
+					<img id="logo-img" src="moneycorp-logo.png" />
 				</div>
 
 			    <div id="frameHolder" style="display: none">
-			     <iframe src="http://mmenu.frebsite.nl" width="200" height="200"></iframe>
+
+					<div id="appInfo">
+	                  <p>app info div</p>
+					</div>
+				     <iframe src="http://mmenu.frebsite.nl" width="200" height="200"></iframe>
+
+				     <p>Here are some links for testing purposes:</p>
+					<ul>
+						<li><a href="#menu">Open the menu.</a></li>
+						<li><a href="index.html#page2">Go to &quot;#page2&quot; (an internal page).</a></li>
+						<li><a href="page3.html">Go to &quot;page3.html&quot; (an external page).</a></li>
+					</ul>
+
 				</div>
 
 
-				<p>Here are some links for testing purposes:</p>
-				<ul>
-					<li><a href="#menu">Open the menu.</a></li>
-					<li><a href="index.html#page2">Go to &quot;#page2&quot; (an internal page).</a></li>
-					<li><a href="page3.html">Go to &quot;page3.html&quot; (an external page).</a></li>
-				</ul>
+				
 			</div>
 		</div>
 
