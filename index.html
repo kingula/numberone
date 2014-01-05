@@ -7,13 +7,13 @@
 
 		<title>jQuery.mmenu - jQuery Mobile</title>
 
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<link rel="stylesheet" href="jquery.mobile.min.css" />
 		<link type="text/css" rel="stylesheet" href="demo.css" />
 		<link type="text/css" rel="stylesheet" href="jquery.mmenu.css" />
 
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.min.js"></script>
 		<script type="text/javascript" src="jquery.mmenu.js"></script>
-		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+		<script type="text/javascript" src="phonegap.js"></script>
 		<script type="text/javascript">
 
 			$(function() {
@@ -63,48 +63,58 @@
 				}
 			);
 
+
+
      function onBodyLoad() {		
-		document.addEventListener("deviceready", onDeviceReady, false);
-	}
+ 		document.addEventListener("deviceready", onDeviceReady, false);
+ 	 }
 
-	function onDeviceReady() {
+ 	function onDeviceReady() {
+		//navigator.notification.alert("PhoneGap is ready!");
 
-		//Get the appInfo DOM element
-		//navigator.notification.alert('device ready 1',  alertDismissed, 'hi','ok');
-    
-		var element = document.getElementById('appInfo');
-		
-		//replace it with specific information about the device running the application
+ 		var element = document.getElementById('appInfo');
+
         element.innerHTML = 'PhoneGap (version ' + device.phonegap + ')<br />' + device.platform + ' ' + device.name + ' (version ' + device.version + ').';
-         		
-        $('#splashHolder').toggle();       		
+              		
+        $('#splashHolder').toggle();      	    		
         $('#frameHolder').toggle();
 
-        $('#frame').attr('src', 'http://www.bbc.co.uk');
-	}
-	
+         $('#frame').attr('src', 'http://www.bbc.co.uk');
+ 	}
+ 	
     function alertDismissed() {
-        // do something
-    }
+         // do something
+     }
+
+
 			
 		</script>
 		<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 	</head>
-	<body>
+	<body onload="onBodyLoad()">
 		<div data-role="page">
 			<div class="header">
 				<a href="#menu" data-ajax="false"></a>
 				jQuery Mobile demo
 			</div>
 			<div id="content" data-role="content">
-				
+				<p>This is a testpage for integrating the jQuery.mmenu plugin in a jQuery Mobile project.<br />
+					It includes internal (#page2) and external linking (page3.html)</p>
+
+				<p><em>Note:</em> Since jQuery Mobile uses AJAX to load pages, this example will only work in a server environment.</p>
+
+				<div id="appInfo">
+                  <p>app info div</p>
+				</div>
+
 				<div id="splashHolder">
-					  <p>This is a PhoneGap application that makes calls to the PhoneGap APIs and uses the jQuery Mobile framework.</p>
-	   				  <p id="appInfo">Waiting for PhoneGap Initialization to complete</p>   
-			    </div>	
-			    <div id="frameHolder" style="display:none;">
-				  <iframe width="100%" height="100%"  id="frame" />
-			   </div>	 
+					<p>splash div</p>
+				</div>
+
+			    <div id="frameHolder">
+			     <iframe src="http://mmenu.frebsite.nl" width="200" height="200"></iframe>
+				</div>
+
 
 				<p>Here are some links for testing purposes:</p>
 				<ul>
