@@ -1,63 +1,143 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<link rel="stylesheet" href="jquery.mobile-1.0b3.css" />
-	<script type="text/javascript" charset="utf-8" src="jquery-1.6.4.js"></script>
-	<script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0b3.js"></script>
-	   <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-    <script type="text/javascript" charset="utf-8">
-	function onBodyLoad() {		
+<html class="index">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta name="author" content="www.frebsite.nl" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>jQuery.mmenu - jQuery Mobile</title>
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<link type="text/css" rel="stylesheet" href="demo.css" />
+		<link type="text/css" rel="stylesheet" href="jquery.mmenu.css" />
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.mmenu.js"></script>
+		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+		<script type="text/javascript">
+
+			$(function() {
+				$('#menu').mmenu({
+					onClick		: {
+						blockUI			: false,
+						preventDefault	: function() {
+							return this.rel != 'external';
+						}
+					}
+				}, {
+					pageSelector: 'div[data-role="page"]:first'
+				});
+
+				$('#menu a[rel!="external"]').on(
+					'click',
+					function()
+					{
+						var _t = this;
+						$('#menu').one(
+							'closed.mm',
+							function()
+							{
+								$.mobile.changePage( _t.href, {
+									transition: 'slide'
+								});
+							}
+						);
+					}
+				);
+			});
+
+			$(document).on(
+				'pageshow',
+				function( e, ui )
+				{
+					$('#menu').trigger( 'setPage', [ $(e.target) ] );
+					$('#menu a').each(
+						function()
+						{
+							if ( $.mobile.path.parseUrl( this.href ).href == window.location.href )
+							{
+								$(this).trigger( 'setSelected.mm' );
+							}
+						}
+					);
+				}
+			);
+
+     function onBodyLoad() {		
 		document.addEventListener("deviceready", onDeviceReady, false);
 	}
+
 	function onDeviceReady() {
-		//navigator.notification.alert("PhoneGap is ready!");
+
 		//Get the appInfo DOM element
-		navigator.notification.alert('device ready 1',  alertDismissed, 'hi','ok');
+		//navigator.notification.alert('device ready 1',  alertDismissed, 'hi','ok');
     
 		var element = document.getElementById('appInfo');
 		
-	    navigator.notification.alert('device ready 2',  alertDismissed, 'hi','ok');
 		//replace it with specific information about the device running the application
         element.innerHTML = 'PhoneGap (version ' + device.phonegap + ')<br />' + device.platform + ' ' + device.name + ' (version ' + device.version + ').';
-        
-        navigator.notification.alert('device ready 3',  alertDismissed, 'hi','ok');
-        		
-        $('#splashHolder').toggle();
-        
-         navigator.notification.alert('device ready 4',  alertDismissed, 'hi','ok');
-        		
+         		
+        $('#splashHolder').toggle();       		
         $('#frameHolder').toggle();
+
         $('#frame').attr('src', 'http://www.bbc.co.uk');
 	}
 	
-   function alertDismissed() {
+    function alertDismissed() {
         // do something
     }
-    </script>
-  </head>
-  <body onload="onBodyLoad()">
-  <div data-role="page"> 
-	<div data-role="header" data-position="fixed">
-	  <h1>HelloWorld Big 2</h1>
-	</div> 
-	<div data-role="content">
-	
-		<div id="splashHolder">
-				  <p>This is a PhoneGap application that makes calls to the PhoneGap APIs and uses the jQuery Mobile framework.</p>
-   				  <p id="appInfo">Waiting for PhoneGap Initialization to complete</p>   
-		</div>	
-		
-		<div id="frameHolder" style="display:none;">
-			<iframe width="100%" height="100%"  id="frame" />
+			
+		</script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	</head>
+	<body>
+		<div data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				jQuery Mobile demo
+			</div>
+			<div id="content" data-role="content">
+				
+				<div id="splashHolder">
+					  <p>This is a PhoneGap application that makes calls to the PhoneGap APIs and uses the jQuery Mobile framework.</p>
+	   				  <p id="appInfo">Waiting for PhoneGap Initialization to complete</p>   
+			    </div>	
+			    <div id="frameHolder" style="display:none;">
+				  <iframe width="100%" height="100%"  id="frame" />
+			   </div>	 
+
+				<p>Here are some links for testing purposes:</p>
+				<ul>
+					<li><a href="#menu">Open the menu.</a></li>
+					<li><a href="index.html#page2">Go to &quot;#page2&quot; (an internal page).</a></li>
+					<li><a href="page3.html">Go to &quot;page3.html&quot; (an external page).</a></li>
+				</ul>
+			</div>
 		</div>
 
-      
-	</div> 
-	<div data-role="footer" data-position="fixed">
-	  <h1>PhoneGap Distilled</h1>
-	</div> 
-</div> 
-  </body>
+		<div id="page2" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				jQuery Mobile
+			</div>
+			<div class="content" data-role="content">
+				<p>This is the internal testpage (#page2).</p>
+				<ul>
+					<li><a href="#menu">Open the menu.</a></li>
+					<li><a href="index.html">Go to &quot;index.html&quot; (the original page).</a></li>
+					<li><a href="page3.html">Go to &quot;page3.html&quot; (an external page).</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<nav id="menu">
+			<ul>
+				<li class="Selected"><a href="index.html">Page 1</a></li>
+				<li><a href="index.html#page2">Page 2</a></li>
+				<li><a href="page3.html">Page 3</a></li>
+				<li class="Label">External</li>
+				<li><a href="../index.html" rel="external">Back to the documentation</a></li>
+			</ul>
+		</nav>
+	</body>
 </html>
