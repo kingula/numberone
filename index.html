@@ -104,20 +104,21 @@
 
 				<div id="splashHolder" class="centeredImage" >
 					<img id="logo-img" src="moneycorp-logo.png" />
+
 				</div>
 
 			    <div id="frameHolder" style="display: none">
 
-					<div id="appInfo">
+					<div id="appInfo" style="display: none">>
 	                  <p>app info div</p>
 					</div>
-				     <iframe src="http://mmenu.frebsite.nl" width="200" height="200"></iframe>
 
-				     <p>Here are some links for testing purposes:</p>
+				    <iframe src="http://mmenu.frebsite.nl" width="200" height="200" style="display: none"></iframe>
+
 					<ul>
-						<li><a href="#menu">Open the menu.</a></li>
-						<li><a href="index.html#page2">Go to &quot;#page2&quot; (an internal page).</a></li>
-						<li><a href="page3.html">Go to &quot;page3.html&quot; (an external page).</a></li>
+						<li><a href="#menu" data-role="button">Login</a></li>
+						<li><a href="index.html#page2" data-role="button">Send money</a></li>
+						<li><a href="page3.html" data-role="button">Tools</a></li>
 					</ul>
 
 				</div>
@@ -140,7 +141,7 @@
 					<li><a href="page3.html">Go to &quot;page3.html&quot; (an external page).</a></li>
 				</ul>
 			</div>
-		</div>
+		</div>  
 
 		<nav id="menu">
 			<ul>
