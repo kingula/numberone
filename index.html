@@ -77,10 +77,7 @@
  	function onDeviceReady() {
 		//navigator.notification.alert("PhoneGap is ready!");
 
- 		var element = document.getElementById('appInfo');
-
-        element.innerHTML = 'PhoneGap (version ' + device.phonegap + ')<br />' + device.platform + ' ' + device.name + ' (version ' + device.version + ').';
-              		
+ 	  		
         $('#splashHolder').toggle();      	    		
         $('#frameHolder').toggle();
 
@@ -107,6 +104,15 @@
 				<div id="splashHolder" class="centeredImage" >
 					<img id="logo-img" src="moneycorp-logo.png" />			
 			   </div>
+			   <div id="frameHolder" style="display:none" >
+				<ul>
+					<li><a href="#menu">Login</a></li>
+					<li><a href="index.html">Register</a></li>
+					<li><a href="page3.html">Widgets</a></li>
+				</ul>		
+			   </div>
+
+
 		   </div>
 
 		   <div id="page2" data-role="page" data-theme="a">
