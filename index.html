@@ -72,6 +72,7 @@
 
      function onBodyLoad() {		
  		document.addEventListener("deviceready", onDeviceReady, false);
+ 		//onDeviceReady() 
  	 }
 
  	function onDeviceReady() {
@@ -81,7 +82,6 @@
         $('#splashHolder').toggle();      	    		
         $('#frameHolder').toggle();
 
-         $('#frame').attr('src', 'http://www.bbc.co.uk');
  	}
  	
     function alertDismissed() {
@@ -95,48 +95,107 @@
 	</head>
 	<body onload="onBodyLoad()" >
 
-	      <div data-role="page" style="background: white" data-theme="a">
-			<div class="header">
-				<a href="#menu" data-ajax="false"></a>
+	    <div data-role="page" id="pageHome" style="background: white" data-theme="a" >
+		   <div class="header" >
+				<a href="#menu" ></a>
 				Moneycorp mobile
 			</div>
-			<div id="content" data-role="content" >
+			<div id="content" data-role="content"  >
 				<div id="splashHolder" class="centeredImage" >
 					<img id="logo-img" src="moneycorp-logo.png" />			
 			   </div>
 			   <div id="frameHolder" style="display:none" >
-				<ul>
-					<li><a href="#menu" data-role="button">Login</a></li>
-					<li><a href="index.html" data-role="button">Register</a></li>
-					<li><a href="page3.html" data-role="button">Widgets</a></li>
-				</ul>		
+			
+					<a href="#pageLogin" data-role="button" data-transition="slide">Login</a>
+					<a href="#pageRegister" data-role="button" data-transition="slide">Register</a>
+					<a href="#pageWidgets" data-role="button" data-transition="slide">Widgets</a>
+					
 			   </div>
+			 </div>
+		 </div>
+
+	    <div id="pageLogin" data-role="page" style="background: white" data-theme="a" >
+		   <div class="header" >
+				<a href="#menu" ></a>
+				Login
+			</div>
+			<div id="content" data-role="content" >			
+				
+				    <label for="name">Username:</label>
+				    <input type="text" name="name" id="name" value=""  />
+				    <label for="name">Password:</label>
+				    <input type="password" name="name" id="name" value=""  />
+				    <a href="#pageLoggedIn" data-role="button">Login</a>
+				
+			 </div>
+		 </div>
 
 
-		   </div>
+		 <div id="pageRegister" data-role="page" style="background: white" data-theme="a">
+		   <div class="header" >
+				<a href="#menu" ></a>
+				Register
+			</div>
+			<div id="content" data-role="content" >							
+		     <iframe width="100%" height="100%" src="http://www.w3schools.com" frameBorder="0" scrolling="no" ></iframe>
+			 </div>
+		 </div>
 
-		   <div id="page2" data-role="page" data-theme="a">
-			<div class="header">
-				<a href="#menu" data-ajax="false"></a>
-				jQuery Mobile
+
+
+		 <div id="pageWidgets" data-role="page" style="background: white" data-theme="a">
+			 <div class="header" >
+				<a href="#menu" ></a>
+				Moneycorp widgets
 			</div>
 			<div class="content" data-role="content">
-				<p>This is the internal testpage (#page2).</p>
-				<ul>
-					<li><a href="#menu">Open the menu.</a></li>
-					<li><a href="index.html">Go to &quot;index.html&quot; (the original page).</a></li>
-					<li><a href="page3.html">Go to &quot;page3.html&quot; (an external page).</a></li>
-				</ul>
+				<div  class="centeredImage" >
+					<img id="logo-img" src="moneycorp-logo.png" />	
+				</div>
 			</div>
-		</div>  
+		 </div>  
+
+
+		 <div id="pageAbout" data-role="page" style="background: white" data-theme="a">
+			 <div class="header" >
+				<a href="#menu" ></a>
+				Moneycorp mobile
+			</div>
+			<div class="content" data-role="content">
+			 <p>	
+
+				The world of foreign exchange and international money transfers is fast-moving. This is why we’re always anticipating the changing needs of the market, and of our customers, to develop new services.
+
+				To do this successfully, we look at challenges creatively. And this approach has seen us pioneer many of the practices and techniques that are now standard across our industry.
+
+				From the very top of the organisation down, we provide a level of service that keeps our customers coming back to us. The fact that 99% of them would recommend us shows that we’re doing something right.
+
+				Our size is also a big part of our success. We’re large enough to undertake the biggest transfers, yet small enough to add the personal touch to every transaction we make for our customers. And that’s something we’ll never lose.
+
+				We’ve worked hard to build a reputation for excellence, but we’ll keep working to maintain our position. That means treating every customer and every transaction with the care, attention and efficiency of service that we’ve become known for.
+
+		      </p>
+			</div>
+		 </div>  
+
+		  <div id="pageLoggedIn" data-role="page" style="background: white" data-theme="a">
+		   <div class="header" >
+				<a href="#menu" ></a>
+				Moneycorp
+			</div>
+			<div id="content" data-role="content" >							
+		      <iframe width="100%" height="100%" src="http://www.moneycorp.com" frameBorder="0" scrolling="no" ></iframe>
+			 </div>
+		 </div>
 
 		<nav id="menu">
 			<ul>
-				<li class="Selected"><a href="index.html">Page 1</a></li>
-				<li><a href="index.html#page2">Page 2</a></li>
-				<li><a href="page3.html">Page 3</a></li>
-				<li class="Label">External</li>
-				<li><a href="../index.html" rel="external">Back to the documentation</a></li>
+				<li class="Selected"><a href="#pageHome">Home</a></li>
+				<li><a href="#pageLogin">Login</a></li>
+				<li><a href="#pageRegsiter">Register</a></li>
+				<li><a href="#pageWidgets">Widgets</a></li>
+				<li><a href="#pageAbout">About</a></li>
+			
 			</ul>
 		</nav>
 	</body>
