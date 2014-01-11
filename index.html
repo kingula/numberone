@@ -5,198 +5,21 @@
 		<meta name="author" content="www.frebsite.nl" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
-		<title>jQuery.mmenu - jQuery Mobile</title>
+		<title>start</title>
 
-		<!-- <link rel="stylesheet" href="jquery.mobile.min.css" /> -->
-		<link type="text/css" rel="stylesheet" href="demo.css" />
-		<link type="text/css" rel="stylesheet" href="jquery.mmenu.css" />
-		<link type="text/css" rel="stylesheet" href="app.css" />
 
-        <link type="text/css" rel="stylesheet" href="css/themes/MONEYCORP.css" />
-        <link type="text/css" rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-        <link type="text/css" rel="stylesheet" href="jquery.mobile.structure.css" />
-
-		<script type="text/javascript" src="jquery.min.js"></script>
-		<script type="text/javascript" src="jquery.mmenu.js"></script>
-		<script type="text/javascript" src="phonegap.js"></script>
 		<script type="text/javascript">
 
-			$(function() {
-				$('#menu').mmenu({
-					onClick		: {
-						blockUI			: false,
-						preventDefault	: function() {
-							return this.rel != 'external';
-						}
-					}
-				}, {
-					pageSelector: 'div[data-role="page"]:first'
-				});
+			
 
-				$('#menu a[rel!="external"]').on(
-					'click',
-					function()
-					{
-						var _t = this;
-						$('#menu').one(
-							'closed.mm',
-							function()
-							{
-								$.mobile.changePage( _t.href, {
-									transition: 'slide'
-								});
-							}
-						);
-					}
-				);
-			});
-
-			$(document).on(
-				'pageshow',
-				function( e, ui )
-				{
-					$('#menu').trigger( 'setPage', [ $(e.target) ] );
-					$('#menu a').each(
-						function()
-						{
-							if ( $.mobile.path.parseUrl( this.href ).href == window.location.href )
-							{
-								$(this).trigger( 'setSelected.mm' );
-							}
-						}
-					);
-				}
-			);
-
-
-
-     function onBodyLoad() {		
- 		document.addEventListener("deviceready", onDeviceReady, false);
- 		//onDeviceReady() 
- 	 }
-
- 	function onDeviceReady() {
-		//navigator.notification.alert("PhoneGap is ready!");
-
- 	  		
-        $('#splashHolder').toggle();      	    		
-        $('#frameHolder').toggle();
-
- 	}
- 	
-    function alertDismissed() {
-         // do something
-     }
+		window.location = "index-main.html"
 
 
 			
 		</script>
-		<script type="text/javascript" src="jquery.mobile.min.js"></script>
 	</head>
-	<body onload="onBodyLoad()" >
+	<body>
 
-	    <div data-role="page" id="pageHome" style="background: white" data-theme="a" >
-		   <div class="header" >
-				<a href="#menu" ></a>
-				Moneycorp mobile
-			</div>
-			<div id="content" data-role="content"  >
-				<div id="splashHolder" class="centeredImage" >
-					<img id="logo-img" src="moneycorp-logo.png" />			
-			   </div>
-			   <div id="frameHolder" style="display:none" >
-			
-					<a href="#pageLogin" data-role="button" data-transition="slide">Login</a>
-					<a href="#pageRegister" data-role="button" data-transition="slide">Register</a>
-					<a href="#pageWidgets" data-role="button" data-transition="slide">Widgets</a>
-					
-			   </div>
-			 </div>
-		 </div>
-
-	    <div id="pageLogin" data-role="page" style="background: white" data-theme="a" >
-		   <div class="header" >
-				<a href="#menu" ></a>
-				Login
-			</div>
-			<div id="content" data-role="content" >			
-				
-				    <label for="name">Username:</label>
-				    <input type="text" name="name" id="name" value=""  />
-				    <label for="name">Password:</label>
-				    <input type="password" name="name" id="name" value=""  />
-				    <a href="#pageLoggedIn" data-role="button">Login</a>
-				
-			 </div>
-		 </div>
-
-
-		 <div id="pageRegister" data-role="page" style="background: white" data-theme="a">
-		   <div class="header" >
-				<a href="#menu" ></a>
-				Register
-			</div>
-			<div id="content" data-role="content" >							
-		     <iframe width="100%" height="100%" src="http://www.w3schools.com" frameBorder="0" scrolling="no" ></iframe>
-			 </div>
-		 </div>
-
-
-
-		 <div id="pageWidgets" data-role="page" style="background: white" data-theme="a">
-			 <div class="header" >
-				<a href="#menu" ></a>
-				Moneycorp widgets
-			</div>
-			<div class="content" data-role="content">
-				<div  class="centeredImage" >
-					<img id="logo-img" src="moneycorp-logo.png" />	
-				</div>
-			</div>
-		 </div>  
-
-
-		 <div id="pageAbout" data-role="page" style="background: white" data-theme="a">
-			 <div class="header" >
-				<a href="#menu" ></a>
-				Moneycorp mobile
-			</div>
-			<div class="content" data-role="content">
-			 <p>	
-
-				The world of foreign exchange and international money transfers is fast-moving. This is why we’re always anticipating the changing needs of the market, and of our customers, to develop new services.
-
-				To do this successfully, we look at challenges creatively. And this approach has seen us pioneer many of the practices and techniques that are now standard across our industry.
-
-				From the very top of the organisation down, we provide a level of service that keeps our customers coming back to us. The fact that 99% of them would recommend us shows that we’re doing something right.
-
-				Our size is also a big part of our success. We’re large enough to undertake the biggest transfers, yet small enough to add the personal touch to every transaction we make for our customers. And that’s something we’ll never lose.
-
-				We’ve worked hard to build a reputation for excellence, but we’ll keep working to maintain our position. That means treating every customer and every transaction with the care, attention and efficiency of service that we’ve become known for.
-
-		      </p>
-			</div>
-		 </div>  
-
-		  <div id="pageLoggedIn" data-role="page" style="background: white" data-theme="a">
-		   <div class="header" >
-				<a href="#menu" ></a>
-				Moneycorp
-			</div>
-			<div id="content" data-role="content" >							
-		      <iframe width="100%" height="100%" src="http://www.moneycorp.com" frameBorder="0" scrolling="no" ></iframe>
-			 </div>
-		 </div>
-
-		<nav id="menu">
-			<ul>
-				<li class="Selected"><a href="#pageHome">Home</a></li>
-				<li><a href="#pageLogin">Login</a></li>
-				<li><a href="#pageRegsiter">Register</a></li>
-				<li><a href="#pageWidgets">Widgets</a></li>
-				<li><a href="#pageAbout">About</a></li>
-			
-			</ul>
-		</nav>
+	  
 	</body>
 </html>
