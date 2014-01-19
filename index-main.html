@@ -71,8 +71,8 @@
 
 
      function onBodyLoad() {		
- 		document.addEventListener("deviceready", onDeviceReady, false);
- 		//onDeviceReady() 
+ 		//document.addEventListener("deviceready", onDeviceReady, false);
+ 		onDeviceReady() 
  	 }
 
  	function onDeviceReady() {
@@ -97,8 +97,8 @@
 
 	    <div data-role="page" id="pageHome" style="background: white" data-theme="a" >
 		   <div class="header" >
-				<a href="#menu" ></a>
-				Moneycorp mobile
+				<a href="#menu" data-icon="home" ></a>
+				 <p style="padding-left: 20px">Welcome</p>
 			</div>
 			<div id="content" data-role="content"  >
 				<div id="splashHolder" class="centeredImage" >
@@ -106,9 +106,9 @@
 			   </div>
 			   <div id="frameHolder" style="display:none" >
 			
-					<a href="index-main.html#pageLogin" data-role="button" data-transition="slide">Login</a>
-					<a href="index-main.html#pageRegister" data-role="button" data-transition="slide">Register</a>
-					<a href="index-main.html#pageWidgets" data-role="button" data-transition="slide">Widgets</a>
+					<a href="index-main.html#pageLogin" data-role="button" data-transition="slide" data-icon="home">Login</a>
+					<a href="index-main.html#pageRegister" data-role="button" data-transition="slide" data-icon="check">Register</a>
+					<a href="index-main.html#pageWidgets" data-role="button" data-transition="slide" data-icon="gear">Widgets</a>
 					
 			   </div>
 			 </div>
