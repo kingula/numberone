@@ -9,12 +9,14 @@
     margin-top:0px;
     margin-bottom:0px;
     padding:0px;
-    height: 100pc;
+    height:100pc;
  }
 
- .logoDiv {
+ .splasher {
 
+    background-image:url('images/moneycorp-logo.png');
+ }
 
-     background-image: ('images/logo.png');
-
+ .titleFix {
+ 	padding-left: 20px
  }

@@ -5,9 +5,8 @@
 		<meta name="author" content="www.frebsite.nl" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
-		<title>jQuery.mmenu - jQuery Mobile</title>
+		<title>Moneycorp mobile</title>
 
-		<!-- <link rel="stylesheet" href="jquery.mobile.min.css" /> -->
 		<link type="text/css" rel="stylesheet" href="demo.css" />
 		<link type="text/css" rel="stylesheet" href="jquery.mmenu.css" />
 		<link type="text/css" rel="stylesheet" href="app.css" />
@@ -19,6 +18,8 @@
 		<script type="text/javascript" src="jquery.min.js"></script>
 		<script type="text/javascript" src="jquery.mmenu.js"></script>
 		<script type="text/javascript" src="phonegap.js"></script>
+	    <script type="text/javascript" src="jquery.mobile.min.js"></script>
+
 		<script type="text/javascript">
 
 			$(function() {
@@ -91,19 +92,19 @@
 
 			
 		</script>
-		<script type="text/javascript" src="jquery.mobile.min.js"></script>
+	
 	</head>
 	<body onload="onBodyLoad()" >
 
 	    <div data-role="page" id="pageHome" style="background: white" data-theme="a" >
 		   <div class="header" >
 				<a href="#menu" data-icon="home" ></a>
-				 <p style="padding-left: 20px">Welcome</p>
+				 <p style="titleFix">Welcome</p>
 			</div>
 			<div id="content" data-role="content"  >
-				<div id="splashHolder" class="centeredImage" >
-					<img id="logo-img" src="moneycorp-logo.png" />			
-			   </div>
+				<div id="splashHolder" class="centeredImage" > 
+					<img id="logo-img" src="images/moneycorp-logo.png" />	
+			    </div>
 			   <div id="frameHolder" style="display:none" >
 			
 					<a href="index-main.html#pageLogin" data-role="button" data-transition="slide" data-icon="home">Login</a>
@@ -121,12 +122,17 @@
 			</div>
 			<div id="content" data-role="content" >			
 				
+				<div data-role="fieldcontain">
 				    <label for="name">Username:</label>
 				    <input type="text" name="name" id="name" value=""  />
+				 </div>
+				 <div data-role="fieldcontain">   
 				    <label for="name">Password:</label>
 				    <input type="password" name="name" id="name" value=""  />
+			    </div>
+				<div data-role="fieldcontain">    
 				    <a href="index-main.html#pageLoggedIn" data-role="button">Login</a>
-				
+				 </div>
 			 </div>
 		 </div>
 
