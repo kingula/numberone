@@ -94,24 +94,29 @@
 		</script>
 	
 	</head>
-	<body onload="onBodyLoad()" >
+	<body onload="onBodyLoad()" style="overflow: hidden" >
 
-	    <div data-role="page" id="pageHome" style="background: white" data-theme="a" >
+	    <div data-role="page" id="pageHome"   style="background: white" data-theme="a" >
 		   <div class="header" >
 				<a href="#menu" data-icon="home" ></a>
-				 <p style="titleFix">Welcome</p>
+				 <p class="titleFix">Welcome</p>
 			</div>
-			<div id="content" data-role="content"  >
+			<div id="content" data-role="content"  class="mmxhome">
 				<div id="splashHolder" class="centeredImage" > 
 					<img id="logo-img" src="images/moneycorp-logo.png" />	
 			    </div>
-			   <div id="frameHolder" style="display:none" >
+			   <div id="frameHolder" class="centeredImage"  style="display:none" >
 			
 					<a href="index-main.html#pageLogin" data-role="button" data-transition="slide" data-icon="home">Login</a>
 					<a href="index-main.html#pageRegister" data-role="button" data-transition="slide" data-icon="check">Register</a>
 					<a href="index-main.html#pageWidgets" data-role="button" data-transition="slide" data-icon="gear">Widgets</a>
 					
 			   </div>
+			 </div>
+			 <div id="footer"  class="mm-fixed-bottom">
+
+			 	<p style="color: #333;">Moneycorp&nbsp;&copy;</p>
+
 			 </div>
 		 </div>
 

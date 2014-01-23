@@ -51,26 +51,32 @@ pre
 	display: none;
 }
 
+
 #header,
 .header,
 #footer
 {
-	background: #FFFFFF;
+	background: #EB2049;
 	border: 1px solid #EB2049;
 	font-size: 16px;
 	font-weight: bold;
-	color: #EB2049;
+	color: #FFFFFF;
 	text-align: center;
 	line-height: 40px;
 	height: 40px;
 	padding: 0 50px;
 }
+
+#footer 
+{
+  background: rgba(235, 32, 73, 0.8);
+}
+
 #header a,
 .header a
 {
 	background: center center no-repeat transparent;
-	background-image: url( 'images/menu.png');
-
+	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );
 	display: block;
 	width: 40px;
 	height: 40px;

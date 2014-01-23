@@ -12,11 +12,17 @@
     height:100pc;
  }
 
- .splasher {
+.mmxhome   
+{
+	background-image: url( 'images/wave.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
 
-    background-image:url('images/moneycorp-logo.png');
- }
+}
 
- .titleFix {
- 	padding-left: 20px
+ .titleFix 
+ {
+ 	padding-left: 20px;
  }
