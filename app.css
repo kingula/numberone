@@ -10,12 +10,16 @@
 
 .mmxhome   
 {
-	background-image: url( 'images/wave.jpg');
+	background-image: url( 'images/dubrov.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-  
+}
 
+.externalcontent
+{
+	margin-left: -20px;
+	margin-right: -20px;
 }
 
  .titleFix 
