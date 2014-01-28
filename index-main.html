@@ -71,23 +71,27 @@
 
 
 
-     function onBodyLoad() {		
- 		//document.addEventListener("deviceready", onDeviceReady, false);
- 		onDeviceReady() 
- 	 }
+     	function onBodyLoad() {	
+   	
+     		$(document).bind("deviceready", onDeviceReady);
+     		$(document).bind("mobileinit", onMobileInit);
+ 		//	document.addEventListener("deviceready", onDeviceReady, false);
+ 		//	onDeviceReady() 
+ 	}
 
- 	function onDeviceReady() {
+     	function onDeviceReady() {
 		//navigator.notification.alert("PhoneGap is ready!");
-
- 	  		
-        $('#splashHolder').toggle();      	    		
-        $('#frameHolder').toggle();
-
+		 $('#splashHolder').toggle();      	    		
+        	 $('#frameHolder').toggle();
  	}
  	
-    function alertDismissed() {
-         // do something
-     }
+     	function onMobileInit() {
+		$.mobile.allowCrossDomainPages = true;
+     	}
+ 	
+    	function alertDismissed() {
+         	// do something
+     	}
 
 
 			
@@ -108,7 +112,7 @@
 			   <div id="frameHolder" class="centeredImage"  style="display:none" >
 			
 					<a href="index-main.html#pageLogin" data-role="button" data-transition="slide" data-icon="home">Login</a>
-					<a href="index-main.html#pageRegister" data-role="button" data-transition="slide" data-icon="check">Register</a>
+					<a href="https://online.moneycorp.com/AccountOpening/Default#/stage_1" data-role="button" data-transition="slide" data-icon="check">Register</a>
 					<a href="index-main.html#pageWidgets" data-role="button" data-transition="slide" data-icon="gear">Widgets</a>
 					
 			   </div>
