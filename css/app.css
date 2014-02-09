@@ -10,15 +10,21 @@
 
 .mmxhome   
 {
-	background-image: url( 'images/dubrov.jpg');
+	background-image: url( '../images/dubrov.jpg');
     background-position: top center;
     background-repeat: no-repeat;
 }
 
+.externalcontainer
+{
+    margin-right: -20px;
+	margin-left: -20px;
+}
+
+
 .externalcontent
 {
-	margin-left: -20px;
-	margin-right: -20px;
+    margin-top: -110px;
 }
 
  .titleFix 

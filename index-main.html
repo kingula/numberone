@@ -7,19 +7,153 @@
 
 		<title>Moneycorp mobile</title>
 
-		<link type="text/css" rel="stylesheet" href="demo.css" />
-		<link type="text/css" rel="stylesheet" href="jquery.mmenu.css" />
-		<link type="text/css" rel="stylesheet" href="app.css" />
+	   <!-- Bootstrap -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+		<link type="text/css" rel="stylesheet" href="css/demo.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquery/jquery.mmenu.css" />
+		<link type="text/css" rel="stylesheet" href="css/app.css" />
 
         <link type="text/css" rel="stylesheet" href="css/themes/MONEYCORP.css" />
         <link type="text/css" rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-        <link type="text/css" rel="stylesheet" href="jquery.mobile.structure.css" />
+        <link type="text/css" rel="stylesheet" href="css/jquery/jquery.mobile.structure.css" />
 
-		<script type="text/javascript" src="jquery.min.js"></script>
-		<script type="text/javascript" src="jquery.mmenu.js"></script>
+		
+	</head>
+	<body onload="onBodyLoad()" style="overflow: hidden" >
+
+	    <div data-role="page" id="pageHome" style="background: white" data-theme="a" >
+		   <div class="header" >
+				<a href="#menu" data-icon="home" ></a>
+				 <p class="titleFix">Welcome</p>
+			</div>
+			<div  data-role="content"  class="mmxhome">
+				<div style="margin-top: 20px;" id="splashHolder" class="centeredImage" > 
+					<img src="images/moneycorp-logo.png" />	
+			    </div> 
+			   <div id="frameHolder" class="centeredImage"  style="display:none" >		
+			      <div class="container">
+			      	<div class="row">
+			      		<div class="col-md-6" >
+							<a style="margin-top: 60px;" href="index-main.html#pageLogin" data-role="button" data-transition="slide" data-icon="home">Login</a>
+							<a href="index-main.html#pageRegister" data-role="button" data-transition="slide" data-icon="check">Register</a>
+							<a href="index-main.html#pageWidgets" data-role="button" data-transition="slide" data-icon="gear">Widgets</a>
+					   </div>
+					   <div class="col-md-6" >
+							<a style="margin-top: 60px;" href="index-main.html#pageLogin" data-role="button" data-transition="slide" data-icon="home">Login</a>
+							<a href="index-main.html#pageRegister" data-role="button" data-transition="slide" data-icon="check">Register</a>
+							<a href="index-main.html#pageWidgets" data-role="button" data-transition="slide" data-icon="gear">Widgets</a>
+					        <a style="margin-top: 60px;" href="index-main.html#pageLogin" data-role="button" data-transition="slide" data-icon="home">Login</a>
+							<a href="index-main.html#pageRegister" data-role="button" data-transition="slide" data-icon="check">Register</a>
+							<a href="index-main.html#pageWidgets" data-role="button" data-transition="slide" data-icon="gear">Widgets</a>
+					   </div>
+					</div>
+			     </div>		
+			   </div>
+			 </div>
+			 <div id="footer"  class="mm-fixed-bottom">
+
+			 	<p style="color: #333;">Moneycorp&nbsp;&copy;</p>
+
+			 </div>
+		 </div>
+
+	    <div id="pageLogin" data-role="page" style="background: white" data-theme="a" >
+		   <div class="header" >
+				<a href="#menu" ></a>
+				Login
+			</div>
+			<div data-role="content" >			
+				
+				<div data-role="fieldcontain">
+				    <label for="name">Username:</label>
+				    <input type="text" name="name" id="name" value=""  />
+				 </div>
+				 <div data-role="fieldcontain">   
+				    <label for="name">Password:</label>
+				    <input type="password" name="name" id="name" value=""  />
+			    </div>
+				<div data-role="fieldcontain">    
+				    <a href="index-main.html#pageLoggedIn" data-role="button">Login</a>
+				 </div>
+			 </div>
+		 </div>
+
+
+		 <div id="pageRegister" data-role="page" style="background: white" data-theme="a">
+		   <div class="header" >
+				<a href="#menu" ></a>
+				Register
+			</div>
+			<div  data-role="content" class="externalcontainer" >							
+		     <iframe class="externalcontent"  width="100%" height="800" src="https://online.moneycorp.com/AccountOpening/Default#/stage_1" frameBorder="0" scrolling="no" ></iframe>
+			 </div>
+		 </div>
+
+
+
+		 <div id="pageWidgets" data-role="page" style="background: white" data-theme="a">
+			 <div class="header" >
+				<a href="#menu" ></a>
+				Moneycorp widgets
+			</div>
+			<div class="content" data-role="content">
+				<div  class="centeredImage" >
+					<img id="logo-img" src="moneycorp-logo.png" />	
+				</div>
+			</div>
+		 </div>  
+
+
+		 <div id="pageAbout" data-role="page" style="background: white" data-theme="a">
+			 <div class="header" >
+				<a href="#menu" ></a>
+				Moneycorp mobile
+			</div>
+			<div class="content" data-role="content">
+			 <p>	
+
+				The world of foreign exchange and international money transfers is fast-moving. This is why we’re always anticipating the changing needs of the market, and of our customers, to develop new services.
+
+				To do this successfully, we look at challenges creatively. And this approach has seen us pioneer many of the practices and techniques that are now standard across our industry.
+
+				From the very top of the organisation down, we provide a level of service that keeps our customers coming back to us. The fact that 99% of them would recommend us shows that we’re doing something right.
+
+				Our size is also a big part of our success. We’re large enough to undertake the biggest transfers, yet small enough to add the personal touch to every transaction we make for our customers. And that’s something we’ll never lose.
+
+				We’ve worked hard to build a reputation for excellence, but we’ll keep working to maintain our position. That means treating every customer and every transaction with the care, attention and efficiency of service that we’ve become known for.
+
+		      </p>
+			</div>
+		 </div>  
+
+		  <div id="pageLoggedIn" data-role="page" style="background: white" data-theme="a">
+		   <div class="header" >
+				<a href="#menu" ></a>
+				Moneycorp
+			</div>
+			<div data-role="content" >							
+		      <iframe class="externalcontent" width="100%" height="100%" src="https://online.moneycorp.com/AccountOpening/Default#/stage_1" frameBorder="0" scrolling="no" ></iframe>
+			 </div>
+		 </div>
+
+		<nav id="menu">
+			<ul>
+				<li class="Selected"><a href="#pageHome">Home</a></li>
+				<li><a href="#pageLogin">Login</a></li>
+				<li><a href="#pageRegister">Register</a></li>
+				<li><a href="#pageWidgets">Widgets</a></li>
+				<li><a href="#pageAbout">About</a></li>
+			
+			</ul>
+		</nav>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mmenu.js"></script>
 		<script type="text/javascript" src="phonegap.js"></script>
-	    <script type="text/javascript" src="jquery.mobile.min.js"></script>
-
+	    <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 		<script type="text/javascript">
 
 			$(function() {
@@ -77,136 +211,20 @@
      		$(document).bind("mobileinit", onMobileInit);
  		//	document.addEventListener("deviceready", onDeviceReady, false);
  			onDeviceReady() 
- 	}
+ 		}
 
      	function onDeviceReady() {
 		//navigator.notification.alert("PhoneGap is ready!");
 		 $('#splashHolder').toggle();      	    		
         	 $('#frameHolder').toggle();
- 	}
+ 		}
  	
      	function onMobileInit() {
-		$.mobile.allowCrossDomainPages = true;
+			$.mobile.allowCrossDomainPages = true;
      	}
  	
 			
 		</script>
 	
-	</head>
-	<body onload="onBodyLoad()" style="overflow: hidden" >
-
-	    <div data-role="page" id="pageHome" style="background: white" data-theme="a" >
-		   <div class="header" >
-				<a href="#menu" data-icon="home" ></a>
-				 <p class="titleFix">Welcome</p>
-			</div>
-			<div  data-role="content"  class="mmxhome">
-				<div style="margin-top: 20px;" id="splashHolder" class="centeredImage" > 
-					<img src="images/moneycorp-logo.png" />	
-			    </div>
-			   <div id="frameHolder" class="centeredImage"  style="display:none" >
-			
-					<a style="margin-top: 60px;" href="index-main.html#pageLogin" data-role="button" data-transition="slide" data-icon="home">Login</a>
-					<a href="index-main.html#pageRegister" data-role="button" data-transition="slide" data-icon="check">Register</a>
-					<a href="index-main.html#pageWidgets" data-role="button" data-transition="slide" data-icon="gear">Widgets</a>
-					
-			   </div>
-			 </div>
-			 <div id="footer"  class="mm-fixed-bottom">
-
-			 	<p style="color: #333;">Moneycorp&nbsp;&copy;</p>
-
-			 </div>
-		 </div>
-
-	    <div id="pageLogin" data-role="page" style="background: white" data-theme="a" >
-		   <div class="header" >
-				<a href="#menu" ></a>
-				Login
-			</div>
-			<div data-role="content" >			
-				
-				<div data-role="fieldcontain">
-				    <label for="name">Username:</label>
-				    <input type="text" name="name" id="name" value=""  />
-				 </div>
-				 <div data-role="fieldcontain">   
-				    <label for="name">Password:</label>
-				    <input type="password" name="name" id="name" value=""  />
-			    </div>
-				<div data-role="fieldcontain">    
-				    <a href="index-main.html#pageLoggedIn" data-role="button">Login</a>
-				 </div>
-			 </div>
-		 </div>
-
-
-		 <div id="pageRegister" data-role="page" style="background: white" data-theme="a">
-		   <div class="header" >
-				<a href="#menu" ></a>
-				Register
-			</div>
-			<div  data-role="content" class="externalcontent">							
-		     <iframe  width="100%" height="800" src="https://online.moneycorp.com/AccountOpening/Default#/stage_1" frameBorder="0" scrolling="no" ></iframe>
-			 </div>
-		 </div>
-
-
-
-		 <div id="pageWidgets" data-role="page" style="background: white" data-theme="a">
-			 <div class="header" >
-				<a href="#menu" ></a>
-				Moneycorp widgets
-			</div>
-			<div class="content" data-role="content">
-				<div  class="centeredImage" >
-					<img id="logo-img" src="moneycorp-logo.png" />	
-				</div>
-			</div>
-		 </div>  
-
-
-		 <div id="pageAbout" data-role="page" style="background: white" data-theme="a">
-			 <div class="header" >
-				<a href="#menu" ></a>
-				Moneycorp mobile
-			</div>
-			<div class="content" data-role="content">
-			 <p>	
-
-				The world of foreign exchange and international money transfers is fast-moving. This is why we’re always anticipating the changing needs of the market, and of our customers, to develop new services.
-
-				To do this successfully, we look at challenges creatively. And this approach has seen us pioneer many of the practices and techniques that are now standard across our industry.
-
-				From the very top of the organisation down, we provide a level of service that keeps our customers coming back to us. The fact that 99% of them would recommend us shows that we’re doing something right.
-
-				Our size is also a big part of our success. We’re large enough to undertake the biggest transfers, yet small enough to add the personal touch to every transaction we make for our customers. And that’s something we’ll never lose.
-
-				We’ve worked hard to build a reputation for excellence, but we’ll keep working to maintain our position. That means treating every customer and every transaction with the care, attention and efficiency of service that we’ve become known for.
-
-		      </p>
-			</div>
-		 </div>  
-
-		  <div id="pageLoggedIn" data-role="page" style="background: white" data-theme="a">
-		   <div class="header" >
-				<a href="#menu" ></a>
-				Moneycorp
-			</div>
-			<div data-role="content" >							
-		      <iframe width="100%" height="100%" src="http://www.moneycorp.com" frameBorder="0" scrolling="no" ></iframe>
-			 </div>
-		 </div>
-
-		<nav id="menu">
-			<ul>
-				<li class="Selected"><a href="#pageHome">Home</a></li>
-				<li><a href="#pageLogin">Login</a></li>
-				<li><a href="#pageRegister">Register</a></li>
-				<li><a href="#pageWidgets">Widgets</a></li>
-				<li><a href="#pageAbout">About</a></li>
-			
-			</ul>
-		</nav>
 	</body>
 </html>
