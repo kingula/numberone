@@ -207,14 +207,14 @@
 
      	function onBodyLoad() {	
    	
-     		$(document).bind("deviceready", onDeviceReady);
-     		$(document).bind("mobileinit", onMobileInit);
- 		//	document.addEventListener("deviceready", onDeviceReady, false);
+     		//$(document).bind("deviceready", onDeviceReady);
+     		//$(document).bind("mobileinit", onMobileInit);
+ 			document.addEventListener("deviceready", onDeviceReady, false);
  		//	onDeviceReady() 
  		}
 
      	function onDeviceReady() {
-		//navigator.notification.alert("PhoneGap is ready!");
+		navigator.notification.alert("PhoneGap is ready!");
 		 $('#splashHolder').toggle();      	    		
         	 $('#frameHolder').toggle();
  		}
