@@ -151,7 +151,7 @@
 
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mmenu.js"></script>
-		<script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
 	    <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
 		<script type="text/javascript">
@@ -214,9 +214,13 @@
  		}
 
      	function onDeviceReady() {
-		//navigator.notification.alert("PhoneGap is ready!");
-		 $('#splashHolder').toggle();      	    		
-        	 $('#frameHolder').toggle();
+		
+				//alert(navigator.alert);
+
+				navigator.notification.alert("PhoneGap is ready!");
+
+		 		$('#splashHolder').toggle();      	    		
+        	    $('#frameHolder').toggle();
  		}
  	
      	function onMobileInit() {
