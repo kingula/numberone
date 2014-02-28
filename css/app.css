@@ -4,8 +4,9 @@
     text-align:center;
     margin-top:0px;
     margin-bottom:0px;
-    padding:0px;
-    height:100pc;
+    padding:0px;   
+    top: 10%;
+    position: relative; 
  }
 
 .mmxhome   
@@ -14,6 +15,9 @@
     background-position: top center;
     background-repeat: no-repeat;
     overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .externalcontainer

@@ -57,7 +57,7 @@
 				Login
 			</div>
 			<div  data-role="content" class="externalcontainer" >							
-		       <iframe  width="100%" height="400" src="https://jan-qa-online.moneycorp.local/?app" frameBorder="0" scrolling="no" ></iframe>
+		       <iframe  width="100%" height="600" src="https://jan-qa-online.moneycorp.local/?app" frameBorder="0" scrolling="no" ></iframe>
 		    </div>
 		 </div>
 
@@ -193,11 +193,12 @@
      	function onBodyLoad() {	
    	
  			document.addEventListener("deviceready", onDeviceReady, false);
- 			onDeviceReady();
 
  		}
 
-     	function onDeviceReady() {				
+     	function onDeviceReady() {
+		
+				navigator.notification.alert("PhoneGap is ready!");
 
 		 		$('#splashHolder').toggle();      	    		
         	    $('#frameHolder').toggle();

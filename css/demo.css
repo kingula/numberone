@@ -75,6 +75,8 @@ pre
 #footer 
 {
   background: rgba(235, 32, 73, 0.8);
+  bottom: 0;
+  top: auto;
 }
 
 #header a,
