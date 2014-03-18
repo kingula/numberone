@@ -195,6 +195,8 @@
      	function onBodyLoad() {	
    	
  			document.addEventListener("deviceready", onDeviceReady, false);
+ 			document.addEventListener("online", isOnline, false);
+ 			document.addEventListener("offline", isOffline, false);
 
  		}
 
@@ -204,6 +206,16 @@
 
 		 		$('#splashHolder').toggle();      	    		
         	    $('#frameHolder').toggle();
+ 		}
+
+ 	    function isOnline() {
+		
+				navigator.notification.alert("You are online!");
+ 		}
+
+ 	    function isOffline() {
+		
+				navigator.notification.alert("You are offline!");
  		}
  	
      	function onMobileInit() {
