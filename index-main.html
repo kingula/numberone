@@ -152,7 +152,7 @@
 
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mmenu.js"></script>
-		<!--script type="text/javascript" src="cordova.js"></script-->
+		<script type="text/javascript" src="cordova.js">
 	    <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
 		<script type="text/javascript">
@@ -211,13 +211,13 @@
  			document.addEventListener("deviceready", onDeviceReady, false);
  			document.addEventListener("online", isOnline, false);
  			document.addEventListener("offline", isOffline, false);
- 			onDeviceReady();
+ 			//onDeviceReady();
 
  		}
 
      	function onDeviceReady() {
 		
-				//navigator.notification.alert("PhoneGap is ready!");
+				navigator.notification.alert("PhoneGap is ready!");
 
 		 		$('#splashHolder').toggle();      	    		
         	    $('#frameHolder').toggle();
