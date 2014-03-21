@@ -18,6 +18,7 @@
         <link type="text/css" rel="stylesheet" href="css/themes/MONEYCORP.css" />
         <link type="text/css" rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
         <link type="text/css" rel="stylesheet" href="css/jquery/jquery.mobile.structure.css" />
+        <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
 
 		
 	</head>
@@ -34,11 +35,24 @@
 			    </div> 
 			   <div id="frameHolder" class="centeredImage"  style="display:none" >		
 			      <div class="container">
-			      	<div class="row">
-			      		<div class="col-md-6" >
-							<a style="margin-top: 60px;" href="index-main.html#pageLogin" data-role="button" data-transition="slide" data-icon="home">Login</a>
-							<a href="index-main.html#pageRegister" data-role="button" data-transition="slide" data-icon="check">Register</a>
-							<a href="index-main.html#pageWidgets" data-role="button" data-transition="slide" data-icon="gear">Widgets</a>
+			      	<div class="row" id="buttonContainer">
+			      		<div class="col-md-6 col-md-offset-3" >
+							<a  href="index-main.html#pageLogin" data-role="button" data-transition="slide">
+								<i class="fa fa-lock fa-3x"></i>
+								<span>Login</span>
+							</a>
+							<a href="index-main.html#pageRegister" data-role="button" data-transition="slide">
+								<i class="fa fa-users fa-3x"></i>
+								<span>Register</span>
+							</a>
+							<a href="index-main.html#pageWidgets" data-role="button" data-transition="slide">
+								<i class="fa fa-dashboard fa-3x"></i>
+								<span>Widgets</span>
+							</a>
+							<a href="index-main.html#aboutUs" data-role="button" data-transition="slide">
+								<i class="fa fa-money fa-3x"></i>
+								<span>About Us</span>								
+							</a>
 					   </div>
 					</div>
 			     </div>		
@@ -138,7 +152,7 @@
 
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mmenu.js"></script>
-		<script type="text/javascript" src="cordova.js"></script>
+		<!--script type="text/javascript" src="cordova.js"></script-->
 	    <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
 		<script type="text/javascript">
@@ -197,12 +211,13 @@
  			document.addEventListener("deviceready", onDeviceReady, false);
  			document.addEventListener("online", isOnline, false);
  			document.addEventListener("offline", isOffline, false);
+ 			onDeviceReady();
 
  		}
 
      	function onDeviceReady() {
 		
-				navigator.notification.alert("PhoneGap is ready!");
+				//navigator.notification.alert("PhoneGap is ready!");
 
 		 		$('#splashHolder').toggle();      	    		
         	    $('#frameHolder').toggle();
@@ -210,12 +225,12 @@
 
  	    function isOnline() {
 		
-				navigator.notification.alert("You are online!");
+				//navigator.notification.alert("You are online!");
  		}
 
  	    function isOffline() {
 		
-				navigator.notification.alert("You are offline!");
+				//navigator.notification.alert("You are offline!");
  		}
  	
      	function onMobileInit() {
