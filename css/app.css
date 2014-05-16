@@ -5,11 +5,13 @@
     margin-top:0px;
     margin-bottom:0px;
     padding:0px;   
-    top: 5%;
+    top: 10%;
     position: relative; 
  }
 .centeredImage img {
-    padding: 30px;   
+    padding: 7px 10px 5px;       
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
 }
 .mmxhome   
 {
@@ -27,7 +29,7 @@
 {
     margin-right: -20px;
 	margin-left: -20px;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 
