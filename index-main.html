@@ -14,7 +14,6 @@
 		<link type="text/css" rel="stylesheet" href="css/demo.css" />
 		<link type="text/css" rel="stylesheet" href="css/jquery/jquery.mmenu.css" />
 		<link type="text/css" rel="stylesheet" href="css/app.css" />
-		<link type="text/css" rel="stylesheet" href="css/bootstrap-touch-carousel.css" />
 
         <link type="text/css" rel="stylesheet" href="css/themes/MONEYCORP.css" />
         <link type="text/css" rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
@@ -35,42 +34,31 @@
 					<img src="images/moneycorp-logo.png" />	
 			    </div> 
 			   <div id="frameHolder" class="centeredImage"  style="display:none" >		
-			      <div class="container" id="buttonContainer">
-			      	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-					    <ol class="carousel-indicators visible-phone">
-					        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					        <li data-target="#myCarousel" data-slide-to="1"></li>
-					        <li data-target="#myCarousel" data-slide-to="2"></li>
-					        <li data-target="#myCarousel" data-slide-to="3"></li>
-					    </ol>
-					    <div class="carousel-inner">
-					        <div class="item active">
+			      <div class="row" id="buttonContainer">
+					    
 					           <a href="index-main.html#pageLogin" data-role="button" data-transition="slide" id="loginButton">
-								<i class="fa fa-lock fa-3x"></i>
+								<i class="fa fa-lock fa-2x"></i>
 								<span>Login</span>
 							</a>
-					        </div>
-					        <div class="item col-md-3">
+					       
 					            <a href="index-main.html#pageRegister" data-role="button" data-transition="slide">
-								<i class="fa fa-users fa-3x"></i>
+								<i class="fa fa-users fa-2x"></i>
 								<span>Register</span>
 							</a>
-					        </div>
-					        <div class="item col-md-3">
+					        
 					            <a href="index-main.html#pageWidgets" data-role="button" data-transition="slide">
-								<i class="fa fa-dashboard fa-3x"></i>
+								<i class="fa fa-dashboard fa-2x"></i>
 								<span>Widgets</span>
 							</a>
-					        </div>
-					         <div class="item col-md-3">
+					        
 					            <a href="index-main.html#aboutUs" data-role="button" data-transition="slide">
-								<i class="fa fa-money fa-3x"></i>
+								<i class="fa fa-money fa-2x"></i>
 								<span>About Us</span>								
 							</a>
 							
 					        </div>
 					    </div>					    
-					</div>			      
+							      
 			     </div>		
 			   </div>
 			 </div>
@@ -169,7 +157,6 @@
 		<script type="text/javascript" src="cordova.js"></script>
 	    <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/bootstrap-touch-carousel.js"></script>        
 		<script type="text/javascript">
 
 			$(function() {
@@ -222,20 +209,22 @@
 
 
      	function onBodyLoad() {	 
+
+     			onDeviceReady();
      		 $("iframe").height(1000); //temp
      		var newHeight = $("iframe").contents().find("#content").height(); 
 			 $("iframe").height(newHeight);
 			document.addEventListener("deviceready", onDeviceReady, false);
  			document.addEventListener("online", isOnline, false);
  			document.addEventListener("offline", isOffline, false);
- 			//onDeviceReady();
+ 		
  		}
 
      	function onDeviceReady() {
 		
 				//navigator.notification.alert("PhoneGap is ready!");
 
-		 		$('#splashHolder').toggle();      	    		
+		 		   	    		
         	    $('#frameHolder').toggle();
  		}
 

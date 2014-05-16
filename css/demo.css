@@ -111,25 +111,34 @@ pre
 	top: 40px;
 }
 #buttonContainer {
-    margin-top: 50px;
+   position: fixed;
+   bottom: 50px;  
+   width: 100%;
  }
 #buttonContainer a {
-    width: 150px;
-    height: 150px;
+    width: 70px;
+    height: 70px;
     display: inline-block;
-    margin: 20px;
+    margin: 2px 2px 5px 2px;
     border-radius: 0;    
     vertical-align: middle;
     -moz-box-shadow: 0 0 10px 2px #888;
 	-webkit-box-shadow: 0 0 10px 2px #888;
 	box-shadow: 0 0 10px 2px #888;
 	border: 0;
+	padding: 5px 0;
+	border-radius: 5px;
+	border: 1px solid #ccc;
  }
  #buttonContainer a i {
-    margin-top: 24px;
+    margin-top: 7px;
 }
 #buttonContainer a span {
     display: block;
-    padding: 5px;
+    padding: 5px 0;
     text-align: center;
+    font-size: 14px;
+}
+.carousel-indicators {
+	bottom: -20px;
 }
