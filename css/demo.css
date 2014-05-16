@@ -119,16 +119,12 @@ pre
     width: 70px;
     height: 70px;
     display: inline-block;
-    margin: 2px 2px 5px 2px;
-    border-radius: 0;    
-    vertical-align: middle;
-    -moz-box-shadow: 0 0 10px 2px #888;
-	-webkit-box-shadow: 0 0 10px 2px #888;
-	box-shadow: 0 0 10px 2px #888;
+    margin: 2px 2px 5px 2px;       
+    vertical-align: middle;   
 	border: 0;
 	padding: 5px 0;
 	border-radius: 5px;
-	border: 1px solid #ccc;
+	border: 1px solid #ededed;
  }
  #buttonContainer a i {
     margin-top: 7px;

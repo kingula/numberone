@@ -8,7 +8,9 @@
     top: 5%;
     position: relative; 
  }
-
+.centeredImage img {
+    padding: 30px;   
+}
 .mmxhome   
 {
 	background-image: url( '../images/dubrov.jpg');
