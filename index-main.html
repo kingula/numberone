@@ -14,6 +14,7 @@
 		<link type="text/css" rel="stylesheet" href="css/demo.css" />
 		<link type="text/css" rel="stylesheet" href="css/jquery/jquery.mmenu.css" />
 		<link type="text/css" rel="stylesheet" href="css/app.css" />
+		<link type="text/css" rel="stylesheet" href="css/bootstrap-touch-carousel.css" />
 
         <link type="text/css" rel="stylesheet" href="css/themes/MONEYCORP.css" />
         <link type="text/css" rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
@@ -34,27 +35,42 @@
 					<img src="images/moneycorp-logo.png" />	
 			    </div> 
 			   <div id="frameHolder" class="centeredImage"  style="display:none" >		
-			      <div class="container">
-			      	<div class="row" id="buttonContainer">
-			      		<div class="col-md-6 col-md-offset-3" >
-							<a  href="index-main.html#pageLogin" data-role="button" data-transition="slide">
+			      <div class="container" id="buttonContainer">
+			      	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					    <ol class="carousel-indicators visible-phone">
+					        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					        <li data-target="#myCarousel" data-slide-to="1"></li>
+					        <li data-target="#myCarousel" data-slide-to="2"></li>
+					        <li data-target="#myCarousel" data-slide-to="3"></li>
+					    </ol>
+					    <div class="carousel-inner">
+					        <div class="item active">
+					           <a href="index-main.html#pageLogin" data-role="button" data-transition="slide" id="loginButton">
 								<i class="fa fa-lock fa-3x"></i>
 								<span>Login</span>
 							</a>
-							<a href="index-main.html#pageRegister" data-role="button" data-transition="slide">
+					        </div>
+					        <div class="item col-md-3">
+					            <a href="index-main.html#pageRegister" data-role="button" data-transition="slide">
 								<i class="fa fa-users fa-3x"></i>
 								<span>Register</span>
 							</a>
-							<a href="index-main.html#pageWidgets" data-role="button" data-transition="slide">
+					        </div>
+					        <div class="item col-md-3">
+					            <a href="index-main.html#pageWidgets" data-role="button" data-transition="slide">
 								<i class="fa fa-dashboard fa-3x"></i>
 								<span>Widgets</span>
 							</a>
-							<a href="index-main.html#aboutUs" data-role="button" data-transition="slide">
+					        </div>
+					         <div class="item col-md-3">
+					            <a href="index-main.html#aboutUs" data-role="button" data-transition="slide">
 								<i class="fa fa-money fa-3x"></i>
 								<span>About Us</span>								
 							</a>
-					   </div>
-					</div>
+							
+					        </div>
+					    </div>					    
+					</div>			      
 			     </div>		
 			   </div>
 			 </div>
@@ -71,7 +87,7 @@
 				Login
 			</div>
 			<div  data-role="content" class="externalcontainer" >							
-		       <iframe  width="100%" height="1750" src="https://www.postofficeinternationalpayments.co.uk/Login/Index/?app" frameBorder="0" scrolling="no" ></iframe>
+		       <iframe  width="100%" src="http://www.postofficeinternationalpayments.co.uk/Login/Index/?app" frameBorder="0" scrolling="no" ></iframe>
 		    </div>
 		 </div>
 
@@ -82,7 +98,7 @@
 				Register
 			</div>
 			<div  data-role="content" class="externalcontainer" >							
-		       <iframe  width="100%" height="1750"  src="https://www.postofficeinternationalpayments.co.uk/register/?app" frameBorder="0" scrolling="no" ></iframe>
+		       <iframe  width="100%" src="https://www.postofficeinternationalpayments.co.uk/register/?app" frameBorder="0" scrolling="no" ></iframe>
 		    </div>
 		 </div>
 
@@ -153,6 +169,7 @@
 		<script type="text/javascript" src="cordova.js"></script>
 	    <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-touch-carousel.js"></script>        
 		<script type="text/javascript">
 
 			$(function() {
@@ -204,13 +221,14 @@
 
 
 
-     	function onBodyLoad() {	
-   	
- 			document.addEventListener("deviceready", onDeviceReady, false);
+     	function onBodyLoad() {	 
+     		 $("iframe").height(1000); //temp
+     		var newHeight = $("iframe").contents().find("#content").height(); 
+			 $("iframe").height(newHeight);
+			document.addEventListener("deviceready", onDeviceReady, false);
  			document.addEventListener("online", isOnline, false);
  			document.addEventListener("offline", isOffline, false);
  			//onDeviceReady();
-
  		}
 
      	function onDeviceReady() {
@@ -234,8 +252,7 @@
      	function onMobileInit() {
 			$.mobile.allowCrossDomainPages = true;
      	}
- 	
-			
+ 				
 		</script>
 	
 	</body>
