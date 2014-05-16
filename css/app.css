@@ -14,7 +14,7 @@
 .mmxhome   
 {
 	background-image: url( '../images/dubai.jpg');
-    background-position: top center;
+    background-position: center -50px;
     background-repeat: no-repeat;
     overflow: hidden;
     opacity: 70%;
